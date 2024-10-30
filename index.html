@@ -11,33 +11,93 @@
     <a-scene embedded arjs="debugUIEnabled: false">
         
         <!-- URLエンコード済みのpatternと画像ファイル -->
-        <a-marker type="pattern" url="markers/%E3%81%95%E3%81%8F%E3%82%89%E9%80%9A%E3%82%8A.patt" emitevents="true">
+        <a-marker type="pattern" url="markers/pattern-%E3%81%95%E3%81%8F%E3%82%89%E9%80%9A%E3%82%8A.patt" emitevents="true">
             <a-image src="images/%E3%81%95%E3%81%8F%E3%82%89%E9%80%9A%E3%82%8A.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
         </a-marker>
 
-        <a-marker type="pattern" url="markers/%E3%82%B7%E3%83%8D%E3%82%B7%E3%83%86%E3%82%A3.patt" emitevents="true">
+        <a-marker type="pattern" url="markers/pattern-%E3%82%B7%E3%83%8D%E3%82%B7%E3%83%86%E3%82%A3.patt" emitevents="true">
             <a-image src="images/%E3%82%B7%E3%83%8D%E3%82%B7%E3%83%86%E3%82%A3.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
         </a-marker>
 
-        <a-marker type="pattern" url="markers/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E9%80%9A%E3%82%8A.patt" emitevents="true">
+        <a-marker type="pattern" url="markers/pattern-%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E9%80%9A%E3%82%8A.patt" emitevents="true">
             <a-image src="images/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E9%80%9A%E3%82%8A.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
         </a-marker>
 
-        <!-- 他の通りのマーカーと画像も同様にURLエンコードして追加 -->
+        <a-marker type="pattern" url="markers/pattern-%E4%B8%80%E7%95%AA%E8%A1%97%E5%85%A5%E5%8F%A3%E6%98%AD%E5%92%8C%EF%BC%94%EF%BC%90%E5%B9%B4.patt" emitevents="true">
+            <a-image src="images/%E4%B8%80%E7%95%AA%E8%A1%97%E5%85%A5%E5%8F%A3%E6%98%AD%E5%92%8C%EF%BC%94%EF%BC%90%E5%B9%B4.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
 
-        <!-- カメラを追加 -->
-        <a-entity camera></a-entity>
-    </a-scene>
+        <a-marker type="pattern" url="markers/pattern-%E8%8A%B1%E9%81%93%E9%80%9A%E3%82%8A.patt" emitevents="true">
+            <a-image src="images/%E8%8A%B1%E9%81%93%E9%80%9A%E3%82%8A.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
 
-    <script>
-        // すべてのマーカーにリスナーを追加
-        const markers = document.querySelectorAll('a-marker');
-        markers.forEach(marker => {
-            marker.addEventListener('markerFound', () => {
-                document.querySelectorAll('a-image').forEach(img => img.setAttribute('visible', 'false'));
-                marker.querySelector('a-image').setAttribute('visible', 'true');
+        <a-marker type="pattern" url="markers/pattern-%E5%8C%BA%E5%BD%B9%E6%89%80%E9%80%9A%E3%82%8A.patt" emitevents="true">
+            <a-image src="images/%E5%8C%BA%E5%BD%B9%E6%89%80%E9%80%9A%E3%82%8A.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern-%E5%8A%87%E5%A0%B4%E9%80%9A%E3%82%8A%E4%B8%80%E7%95%AA%E8%A1%97.patt" emitevents="true">
+            <a-image src="images/%E5%8A%87%E5%A0%B4%E9%80%9A%E3%82%8A%E4%B8%80%E7%95%AA%E8%A1%97.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <!-- 例: 祭りの画像 -->
+        <a-marker type="pattern" url="markers/pattern-%E7%A5%AD%E3%82%8A.1.patt" emitevents="true">
+            <a-image src="images/%E7%A5%AD%E3%82%8A.1.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+        <a-marker type="pattern" url="markers/pattern-%E7%A5%AD%E3%82%8A.2.patt" emitevents="true">
+            <a-image src="images/%E7%A5%AD%E3%82%8A.2.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+        <a-marker type="pattern" url="markers/pattern-%E7%A5%AD%E3%82%8A.3.patt" emitevents="true">
+            <a-image src="images/%E7%A5%AD%E3%82%8A.3.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+        <a-marker type="pattern" url="markers/pattern-%E7%A5%AD%E3%82%8A.4.patt" emitevents="true">
+            <a-image src="images/%E7%A5%AD%E3%82%8A.4.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+        <a-marker type="pattern" url="markers/pattern-%E7%A5%AD%E3%82%8A.5.patt" emitevents="true">
+            <a-image src="images/%E7%A5%AD%E3%82%8A.5.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern-%E8%A5%BF%E7%94%BA%E4%BC%9A.patt" emitevents="true">
+            <a-image src="images/%E8%A5%BF%E7%94%BA%E4%BC%9A.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern-%E8%A5%BF%E6%AD%A6%E6%96%B0%E5%AE%BF%E9%A7%85%E5%89%8D%E9%80%9A%E3%82%8A.patt" emitevents="true">
+            <a-image src="images/%E8%A5%BF%E6%AD%A6%E6%96%B0%E5%AE%BF%E9%A7%85%E5%89%8D%E9%80%9A%E3%82%8A.png" position="0 0.5 0" scale="1 1 1" rotation
+        <a-marker type="pattern" url="markers/pattern-%E8%A5%BF%E6%AD%A6%E6%96%B0%E5%AE%BF%E9%A7%85%E5%89%8D%E9%80%9A%E3%82%8A.patt" emitevents="true">
+            <a-image src="images/%E8%A5%BF%E6%AD%A6%E6%96%B0%E5%AE%BF%E9%A7%85%E5%89%8D%E9%80%9A%E3%82%8A.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern-%E4%BB%B2%E8%A6%8B%E4%B8%96%E9%80%9A%E3%82%8A.patt" emitevents="true">
+            <a-image src="images/%E4%BB%B2%E8%A6%8B%E4%B8%96%E9%80%9A%E3%82%8A.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+　      </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern-%E6%9D%B1%E9%80%9A%E3%82%8A.patt" emitevents="true">
+            <a-image src="images/%E6%9D%B1%E9%80%9A%E3%82%8A.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern-%E5%B9%B3%E5%92%8C%E9%80%9A%E3%82%8A.patt" emitevents="true">
+             <a-image src="images/%E5%B9%B3%E5%92%8C%E9%80%9A%E3%82%8A.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern-%E9%9D%96%E5%9B%BD%E9%80%9A%E3%82%8A.patt" emitevents="true">
+            <a-image src="images/%E9%9D%96%E5%9B%BD%E9%80%9A%E3%82%8A.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+            <!-- カメラを追加 -->
+            <a-entity camera></a-entity>
+        </a-scene>
+
+        <script>
+            // すべてのマーカー要素を取得し、リスナーを追加
+            const markers = document.querySelectorAll('a-marker');
+
+            markers.forEach(marker => {
+                // マーカーが検出されたときに画像を表示
+                marker.addEventListener('markerFound', (event) => {
+                    // すべての画像を非表示にしてから、現在の画像を表示
+                    document.querySelectorAll('a-image').forEach(img => img.setAttribute('visible', 'false'));
+                    marker.querySelector('a-image').setAttribute('visible', 'true');
+                });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>
