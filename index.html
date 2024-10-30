@@ -8,16 +8,95 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.2/aframe/build/aframe-ar.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs = "debugUIEnabled: false">
-        <a-marker type="pattern" url="markers/pattern1.patt">
-            <a-image src="images/image1.png" position="0 0.5 0"scale="0.5 0.5 1"rotation="90 0 0"></a-image>
-        </a-marker>
+    <a-scene embedded arjs="debugUIEnabled: false">
         
-        <a-marker type="pattern" url="markers/pattern2.patt">
-            <a-image src="images/image2.png" position="0 0.5 0"scale="2 2 1"rotation="90 0 0"></a-image>
+        <!-- 各日本語のパスに対応するマーカーと画像エンティティを追加 -->
+        <a-marker type="pattern" url="markers/pattern_さくら通り.patt" emitevents="true">
+            <a-image src="images/さくら通り.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
         </a-marker>
 
+        <a-marker type="pattern" url="markers/pattern_シネシティ.patt" emitevents="true">
+            <a-image src="images/シネシティ.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern_セントラル通り.patt" emitevents="true">
+            <a-image src="images/セントラル通り.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern_一番街入口昭和４０年.patt" emitevents="true">
+            <a-image src="images/一番街入口昭和４０年.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern_花道通り.patt" emitevents="true">
+            <a-image src="images/花道通り.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern_区役所通り.patt" emitevents="true">
+            <a-image src="images/区役所通り.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern_劇場通り一番街.patt" emitevents="true">
+            <a-image src="images/劇場通り一番街.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <!-- 例: 祭りの画像 -->
+        <a-marker type="pattern" url="markers/pattern_祭り.1.patt" emitevents="true">
+            <a-image src="images/祭り.1.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+        <a-marker type="pattern" url="markers/pattern_祭り.2.patt" emitevents="true">
+            <a-image src="images/祭り.2.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+        <a-marker type="pattern" url="markers/pattern_祭り.3.patt" emitevents="true">
+            <a-image src="images/祭り.3.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+        <a-marker type="pattern" url="markers/pattern_祭り.4.patt" emitevents="true">
+            <a-image src="images/祭り.4.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+        <a-marker type="pattern" url="markers/pattern_祭り.5.patt" emitevents="true">
+            <a-image src="images/祭り.5.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        
+        <a-marker type="pattern" url="markers/pattern_西町会.patt" emitevents="true">
+            <a-image src="images/西町会.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern_西武新宿駅前通り.patt" emitevents="true">
+            <a-image src="images/西武新宿駅前通り.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern_仲見世通り.patt" emitevents="true">
+            <a-image src="images/仲見世通り.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern_東通り.patt" emitevents="true">
+            <a-image src="images/東通り.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern_平和通り.patt" emitevents="true">
+            <a-image src="images/平和通り.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/pattern_靖国通り.patt" emitevents="true">
+            <a-image src="images/靖国通り.png" position="0 0.5 0" scale="1 1 1" rotation="90 0 0" visible="false"></a-image>
+        </a-marker>
+
+        <!-- 他の通りのマーカーと画像を同様に追加してください -->
+
+        <!-- カメラを追加 -->
         <a-entity camera></a-entity>
     </a-scene>
+
+    <script>
+        // すべてのマーカー要素を取得し、リスナーを追加
+        const markers = document.querySelectorAll('a-marker');
+
+        markers.forEach(marker => {
+            // マーカーが検出されたときに画像を表示
+            marker.addEventListener('markerFound', (event) => {
+                // すべての画像を非表示にしてから、現在の画像を表示
+                document.querySelectorAll('a-image').forEach(img => img.setAttribute('visible', 'false'));
+                marker.querySelector('a-image').setAttribute('visible', 'true');
+            });
+        });
+    </script>
 </body>
 </html>
